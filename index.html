@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <head>
+
+        <title>318</title>
+        
+        <link type="text/css" rel="stylesheet" href="./files/default.css">
+          <script src = "https://cdn.wilddog.com/js/client/current/wilddog.js" ></script>
+        <script type="text/javascript" src="./files/jquery.min.js"></script>
+        <script type="text/javascript" src="./files/jscex.min.js"></script>
+        <script type="text/javascript" src="./files/jscex-parser.js"></script>
+        <script type="text/javascript" src="./files/jscex-jit.js"></script>
+        <script type="text/javascript" src="./files/jscex-builderbase.min.js"></script>
+        <script type="text/javascript" src="./files/jscex-async.min.js"></script>
+        <script type="text/javascript" src="./files/jscex-async-powerpack.min.js"></script>
+        <script type="text/javascript" src="./files/functions.js" charset="utf-8"></script>
+        <script type="text/javascript" src="./files/love.js" charset="utf-8"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+   
+
+   <div id="yezi" class="fabiao">
+            <h4>浇水</h4>
+          请使用真实姓名:<input type="text" name="" id="name">
+
+          <div class="txt" >&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;添加枝叶:<input type="text" maxlength="10" name="" id="context"></div> 
+         <br>
+             <input type="button"  value="提交" id="submit">
+        </div>
+
+        <div id="liuyan" class="liuyanStyle">
+            <h4>留言版</h4>
+          内容:<textarea id="liuyantxt" rows="10" cols="30" style="margin: 0px; width: 521px; height: 150px;"></textarea> <br>
+
+          <div class="txt" >&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;署名:<input type="text" maxlength="10" name="" id="shuName"></div> 
+
+          <div class="txt" >&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;添加密码:<input type="password" maxlength="10" name="" id="mmm"></div> 
+         <br>
+             <input type="button"  value="添加留言" id="submit2">
+        </div>
+
+        </div>
+        <div id="main">
+            <div id="error">亲，您使用的浏览器无法支持即将显示的内容，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器哟~</div>
+            <div id="wrap">
+               <div id="text">
+                    <div id="code">                 
+
+                    <span id="wenCotext" class="say">时间是一条不能逆流的河,不能成为伟大的人,那就好好享受生活。 
+
+</span><br>
+                        <br>
+                 
+
+                   <br>
+                    <span id="shuming" class="say">--  刘水根,程远博,唐强,郭旭,曾进,陈锋,章小辉</span>
+                  </div>
+                </div>
+                  <div id="clock-box">
+                      <a href="#" target="_top">那一年我们毕业了</a>
+                        <div id="clock"></div>
+                    <br>
+                    <a href="index1.html" target="_self">photo album</a>
+                      <input type="button" id="show" value="浇水"> 
+                    <input type="button" id="showliuyan" value="添加留言"> 
+                </div>
+                <canvas id="canvas" width="1100" height="680" onclick="document.getElementById('music').play();return false;" ></canvas>
+            </div>
+            <audio src="files/AniFace - Where are you.mp3"  id="music" ></audio>
+        </div>
+
+
+
+     
+    
+  
+
+    <script>
+       
+      window.keyValue=new  Array();
+
+
+function getNowFormatDate() {
+    var date = new Date();
+    var seperator1 = "-";
+    var seperator2 = ":";
+    var month = date.getMonth() + 1;
+    var strDate = date.getDate();
+    if (month >= 1 && month <= 9) {
+        month = "0" + month;
+    }
+    if (strDate >= 0 && strDate <= 9) {
+        strDate = "0" + strDate;
+    }
+    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+            + " " + date.getHours() + seperator2 + date.getMinutes()
+            + seperator2 + date.getSeconds();
+    return currentdate;
+}
+
+
+         console.log("%c 别了我们大学,别了我们的学生时代。", "font-size:20pt;color:#EE0000");
+         console.log("%c 奋力奔跑的孩子运气都不会差，一起加油。 ", "font-size:20pt;color:#EE0000");
+         console.log("%c 纪念我们的学生时代", "font-size:20pt;color:#EE0000");
+
+        
+        
+ console.log("\
+qk0XBkJPNS1BG7.;J5MFPXii:rO7.vqEGivkBurSi .   7ii:i:i:i::.,:::i:i:i:i:ju777rv7::i::,::i:i:i:r:i:i:i,iXFJu1B2Z2BPjii7E8SOO8PkqF2S0SFSP:i2E: iPX5k0LSPP2\n\
+vUkPMu::i1UqF2. jXFYL;,rFjYX7:2kq::Su1.;,     ,::,,,.,.i:v:.,..,,,,,...;Y::::v::U,7:.rr,.,,:,,,,,,. ,FuYLuGuZ5kri7LUXMkMXG15k5Yk1UU21::UF: :U5J5P7jkFk\n\
+vi8MPu7rL5P1GMr r2U1j:vSZ1Ji7:rJu  FSv 2OS,.,.:ii:i::::::vLJJ,::::::::i::7:.:vLi2ii:iv7:::i::::::::,ikXu1U8O@MBrjXk2SMB8PMXSuLkkF515P:rFXYivFSNEErqNXN\n\
+L;kZ:JrXu0jq8Bv7rj1USEuNkUu7u:iiv; 5qU ;0q....:r:i::::::FPviiji::::::::rrr,riLJii7:,:rv::i;:ii:::::u55ku2vUP5GBSu011SMEOSM1r72F1kXuFkrrSZr:5SqqG5Lkk22\n\
+Ev5YLY:28uii705:LOMJGZ2k5ujXq::7X; J:J:NZF, ..:::::::::,iirYvv::::ur:,::7::ri7uLU,:rLi::::7ii:::::::2Sqi:;uk57@UUu22qBqZGZLj@qu5EUu5E::k8vrvkkEEPvX2kF\n\
+8FF77Y7r7U5Suv7  YL0Ojik8GOE5::Z07.Srr:iLJ: ..::::::::::,..r7.,:,:i:u7,:r:i:;::i:;:i7i,:i7:::::i::::7LJrrqOOEuE5YSJUXMXkOZJPX558kYuS5:rSFi7uF0XN11k1Jk\n\
+0015XUq..vPUuvFJruvi011uBO1v2LvUur.rFu. ;;: ..:,:...,,::i,i:rYi,:::.7r.r:ri:i:722vY:::irii:::::i:,,:;u1L51M2uuq522UvvZMZE1FXPUUNNEPjPLSqO77LFZqX0uNP5k\n\
+S2vNNM7. LXOFujjO@O5Fu1J2NL Lu,uUr ijF..U2i  ,  .....   .:rriv:i:7i::iiv:;i,,:uU;r7:,ri:ir:::::i.,rU2PkXukO0XXGkJ25uvSGM82kNSkPPkPP0kukXkrrvSZSEXvNME8\n\
+@vPqZN.  i805SPkEP8GF0J.iSu iv:7j7 ikX: FPr   .uGO@B@MP7..;:7ri::7i,:,7..i:ir:;i:.Ji,r77i:::::i,i:5G2kNEY58NGPkU7ukukS8NFS8PPEXP02NXPjj2qLriN21S57FFF0\n\
+E7LXYZ:  ukUq@Gr:iUEk5: :kJ71L,iiv.:Lu: Jq7  7B@B@B@B@B@@i.iiUi,.,::.:7i:rrr,irr:.i,.vr5v:,::;::iSBM55uki101uqkJL12kNEZNYqNNP0PPSk5q8kSq0YiUqq0OPLFGqM\n\
+OUiUYu; J7kjqqFi7:EOqF7ivuFkrLi77r..ri: 7J7  B@@@BMO8PGZ@O ,iuj.,.:i.v:.7i rY77rr,;..rru:r:,i:;::ivSMUu1rYXkSFXUu2S1F1GFF0ESXXPqkjF0OvJqNi77YUE8q7P8MM\n\
+v1L5i,iiZ:LLULu:r:uUYN7.iFvSiL:15Y ,uL: :ri  5B@MMMM8JJZMN,:rLJuv:.YE@BBBMkL::urvrJ7,L7Y,::7......::vEOq7vNX1PFk1X5u1P0OZBFjO01GPF1kGvLXN.:u5ujELivJLL\n\
+FO2r7YO2  7rriii:,UX2L: ,UivYi,UFU .PX7 vu7  i@GZN8BBi:LX;:,rr7uXuXB@B@B@B@Bk.j:iPU7iv;J05qkL.vr :FrLJXqr58NGuFPXUukXGBZ5GPEXkqqNPSqi::i8i.;S,ri:::::.\n\
+FME:1@O7i.:v:i;Ej i7vi: r5L2Zj:u1S .Fq7 70J  7BMOBv5MXJ,,i;;:7;i1@B@8Eq0X0UPO5PqU21U0MO@@@OPG1qMSkPXqqXErqN55SOOqSEO0SENjOXNEqkkPFS8Yivr20.:iqu:.:,,,.\n\
+FGGqq71Ju vvY;7N0:ruvuNuZB1rru.JL7  vJr :uv   0E5E  L:  :,,iiv,:rS@BBOOZEuPE@B@B@BBO5:ir:7v7JP@@BM@GXFEZJFONMB@BZSMB@8ZOX8qZN215P512Pv1Lkk YqOSu5FkkNN\n\
+kGGMLkP2r LS1v11S;vXJUS.rUr::j.Ur: .7rv,:vr  .:@8Mu.,:,,:,.::i.irrM@B@BMYYM@B@B@B@B@:  .   i...::S7vkE1krS8@B@B@B@B@B@EMOMZMNX55F2uXN1j1PF 1MZq8BBBMB@\n\
+GOON0Gkrv Jkk7S:.UuYYuJ.:YJ7r;:vuii8@B@@@B@Si: :ZBq;ir7GL.ii7r,i5;Z@@7:Gu@@B8j,   LBGiJ7::ivr::,i7::78Our1@B@BBGXvi .u8MkO0PMX2j2FXk07iU1u,UkP1LS5ZFXN\n\
+5OOPrYS7i rXkuSF7POPuFG5:5L75Z.7M@B@BBMBBBB@BX  vBOSji0@GZESjuv11rv@Bv :u@BZYr. .. LMSkOSqPkk5jJjPYr7SEu2XBBEZkvi:   .5BjBMELY1PkqFXqvi1Xr5@XkFkqqqOMM\n\
+O5F.rJMPq,,r7iu5,iXLZ1ZFqXk1GM:.@B@BBMBMB@BOBB:5@Z@q v@GMBBZEXJrj7iu@B5,7B@G0S0kqPivu7v57r7:;r::ivi,iJ27ju00EGZLLuL7i:Luk2v:.r@O2SFF0i70@u70YZP5XZZGBO\n\
+;ikr 7BL::     7r:u:  r:JiOOEOirB@MBM@BM8BB@BMM@v7; .@B@BMOOOM0q5vi :@Br.OB8UuB7:j, ...2Yi.,:riiLJJuj5uLuYjOZOO@M@BM7r:viii::7@OuF2FN7:1O1k7r@0UPOES0G\n\
+r:OL71Xi .:ri:,v2vL:.  i5.jkuF:i@Ok1kPkr:i:S@OM@k0r MB@BMGOOBMMOOZ1.:UMGB8@M21@u,,: .rv1ME2FkJ2Ju8BMM807ZPuP0kqMU jXi. YvEFrij@O5kkkEr.L2iiirBBXMMMqN0\n\
+7:EZSGOL  YMq002 ii55S7UqrMMOE.7BO8EjuJi:. :GGX@B@B@B@BMEOG8EEEOOBG:BO1@2  GOqOOji.,i@MX7r15F1JFP7LXrrLL5G5ESq5O0.:P, 5@PMPMBOEE5qPNGvi25i:N2MBGkM8OMB\n\
+E100O5Mr  .ZESki :LSqS;r;iOBMX.i@XMOB7JBZi. vu:BOGBB@MBOMO8EZZGOP1OuZ27NuY  EMGPL:;riB@Oq5kFv1OPGuNSqu7YNqS8SFXM@uiji;@8OGOj@GO8qPNqMv;uSSL8X1P0S0OEMO\n\
+GMBj7kME7. PPS1riiuuYuN52XSFXF.:MPiiq  i:. ., ,@qMB@M@BMZZ0OOMZMqJFP5vJvUGSNB@BBMU:. @B@MMEM0v5LPX7FF1iuP8M8qqPNL7,i:@MMqXZY2O8MNqkNOv LqU:ZNuSMZXPPGM\n\
+BM@q:781,  FZFkrirYuLjSUuSOX7Y77LNLUMv::r,.,:7MBBB@BBMGqZ0EPNEOBZ21LL:2YMB@B@POB8Y. 1B@M@8NN@BO2XESX75YqMO5JX@OqF5L:.,@BM25GvXBM0PPPO7:Equ1ZJq8EqEXXMZ\n\
+Su8PSi1J,  jk22:,:Y1FEL2vj100O8B1LOMMP7iY7::L@B@O@OMMOMqqEPZZOM@XuEuY0@@B@B@BZ::7  kB@B@ON0MB@@Ojq18OX552Jrii0OPq1i.U. 1BBB@qFBB00XN0UF@FMk8vEUU0FJMOX\n\
+OUOL,rv2vJUu7PEFLLFFGM51uUEYuSXJF7qEk7: ;2ui:Z@BEkMGOqMNP0OZOOBBB1SUBB@BBM@B@O;uG uB@BBMZEMM00BO@MuiuirvvJv7J:virL;YX    :UMBB@B@MOGO8MSYO@ZYMFPBkLFZv\n\
+@1U0Y7YvNE777u2N8O0OEZZXrkPrOXvu1OBOq51FXFi.  B@BM8OGN8MMM8@B@B@0UX1O@MBMBMEM@uNEBB@BBOM0MMGqENOPv :   ::7u5NU,. i:7:ir7     ,X@EZ0qNqFu21SkuSJvSFYu2u\n\
+GFUXX7uGZZSvj71LuSSEE2kLLU5UkY2MOB@k8OBPv:,  qM0ZM@MBMBBMZZ8BMB@M8@2@BBBBMMX8BPZB@@BBMMMMMOGOZGZk:.,..    . :ri77.     .i .    vP2u21UXLJU1kqLF7u5Sj1u\n\
+OOS2FMZuuEU0Xk22u2SSjju77ukSSN8@B@MiGG51L;. E@OG0GOO8MOMEZEEO@@@i   M@BBB@OqNBB@BBMMOOM@@BMMO8EGMv:...i      . ru    . .i       Pqu5u0PPL7FSvuPUFYvF12\n\
+7SG0v77rLNSSOX550uj1X15v71OM@B@B@B@rrY.,r, 1@OO8ZPOGOZ0kqZGqGB@Bi .:@BBMBBMqGM@MBMBMMMBBBBBOMGE0B1::. r.,   ,  7r    . ,: . ,   58k111LL2LFUqUSUvuqEku\n\
+.2Mqv::i7Y5OESv7JkuUL0MJu@@@B@MMOBM77,.,:.r@MOOOEPZMMGPNqZGGZOB@B@B@@@MBB@MOM@BBMBMBMBBBMBMMO80ZMMi.  ;;i:  ,. i:   ., .  .:    ;Pkk5k1LL2YL1Eu7J55Zkj\n\
+:L@k2:r;r,:FvuFr:r8EF7Ej0B@G8BMq8O@.u;:i. uBMOOG8XEMO0ZN0EM0OZOM@MMB@MBMBBBMBMBMBMBM@MBMOMMMMZZZ@Y;:   r7r7rrii7,    .     .    .8UEP2GSPuSu52v1q5JuSF\n\
+irBFkLir;7;20jLqkuMMkjSkB@@Mq@BZZMB::k:. ,B@MOOOM8EMOMO8q8O0EMGMB@@@B@MBM@MBMBMBMBMBBBMBMBMBMMZBBr :   :;i,:,..r, .:    :i.i::.  B8jJuZPPjPkuvkSk21kk2\n\
+i,MY2Ji71qF8P5vi1uF2kMZXBMBBEM@ZZM@:.k   1@BMEZB@OGMMGEG8ZO008OO@B@MBMBBBB@MBMBMBMBMBBBMBMMOBM@O:      ..   . :2: .r,   kM0L7v:  .OYY10Z2LZSvjFUk2ESXF\n\
+;rBuYPUXuSk5Jj777uXFv2kkBBGBMEBMZBB. 8: L@@BO80BB@B@BMGOE8EENOOOB@MBBBMBBBUBM@MBMBMBBBMMMBMBOB@.       iLUUur,Lu:i,::.7@EEOPPr    5quJFJ7ju5rJuUuXjFSU\n\
+XUMP1E2Z17uZNuF1M02UuEXk@MOZBNMMOB@  N@BjM@MOG8O@MiiuBOEEEON8OOE@BBMBMM8MMk@BB@B@BBMBMBMMMBMM@@vr;.    i5jjYi.,:::i:i:Jvi:iir:    kE8YJujuk572UPk1FqPu\n\
+5UYq2urLvrvkSqEPUUPjvuuBBM8OZOO@O@O  PBL,@BMGOO@7   7@ENP88EZO8GM@B@B@MMGMB@B@B@B@MBMBMBMBMBM@BSvr..:;:,.:rqM8SuLYv7;;:i:::::i:,  LS12vXu1UuuP5P0NPNqY\n\
+Fvv7vuPr11L7500NqFXj2:2BBO8GZZ@B@B@ :B@r7B@OOM@Pi..L@OZPEMMNE888@BBMBB@B@B@@@B@@88@MBMMMMMBMBM@BUSk7uJvi:   :7FMMZqkX11uJLYvr,,.i:P1UJYuLuLr2Ju1LLFS8P\n\
+JYv5FXMFvu1qL7GBGF7SL.S@MMGM88OENOk i@MqXMMGZB8SFZB@BON0Z@BGN8GBMMGEXqqM@1kYvGBMPPGBMMMBOBMBMBB@@@BJ:ir77vri::.i0MO8PkFS5FPOXkYr7X0SU51YLGJi51U0quLXXS\n\
+X1jLuU5EYLuJJrLk5vSvi:BBMOM8MM;  ,  @OGEMMO8GE8OBB@8GGOZOGMGZGBM8EOOON8ZOZEi  iN@PPM@MMMBMBMMMBB@OkM80ZZ8EZNN5uU00GqGEq55Uuiuu51qU511u5qJ2ruBEXqquqF1Y\n\
+uu1uj1vvjLLLu1uLj50UiqM@MMOM0OZqq@.uBONMMMMMOMOMOMOBNZGMZGO@B@BM8GqOMB8GP@BOY,  iMB@BBBBBBMMMBB@B.:MPNZZPZN01i.. :r7vYLjLL..EuvjJj7LvLL02YXMZZSqZON1vv\n\
+Y;Yu55jUuvuu115FN1FLvSOBB0OMMOMM@@@BMMOG@BMOMOMOMMMMMOMZMMBOMM@O8OZPGM@GP8@OP5:: Y@B@BBMBMBMMMBM0j1PvLkFLiii7Uq;      ,i:   YSvvvLLi5Z1X7U8Z1u8S@M777r\n\
+UJLvvJuUjF5EU1JY7L7ij@MBMMMBMMOOM@B@MB0PU0BBMMMBM@B@BME8YvUPGBMMZ8OZSNG@B@BBFOUu,Yq@BBBBMBMBMBMMM@B1ivuX27   iXG   .         Y5v777L2UJULXUSUk2FFLLu7L\n\
+LY5u5UuF1qPU5uFU2SYS@B@BBMBMMMB@@BBMB@@@uFMM@B@B@BM8O0GOq7SZMBBM88GGGkEM@@@BE0ZNJ:@@@BBBBMMMMMBM@@@7  ,7kNSr: .vL  ....       uYLi;rJLSZXuF2GMu1OZMMMM\n\
+OM@@B@BBBM8GOM0FjL0@B@BBM@MBM@@MOB0OB@MkB@B@B@B@B8qEEGZZO0Uq0OBB0MO8EZO;;ZNMMBMMOY@@MMOOMBMBMMMBB@M;  ..:irU;, .0:     ..     .B0qSXPuuFvuJ0B@ZULJ5YFB\n\
+jvSqFu21XkFY7r7r,L@B@B@MBMBB@B@;rB@B@r  NBBOMMBM8PEqZE8ZZMXSEO@OZ8MO8E@7 .YkO88EB@@BBMMOBBMO@BBM@@Er  .....:... F@   ..        X@OGqG5S1PXNMOUU;vrj0uv\n\
+7riiiri7iiiriii.r@B@MBMBMMM@@@0iL@B@B   YMOOZENGGOGZ0EqEG@X5SOBO0OMOZGBE ,,vLi:J1NB@B@M@B@qPM@BBB@j2L:,,.. .... 2@     ...     iXU7rivv7L1EGOZOG0uYLUL\n\
+j7v7rrv777L77;i7@B@BBMBBBMBB@8::qB@@0  .L1M8O8ZNEE8G8E00B82FqO@G8OBGZG@P .iii::.:iii;UEM@M::MB@B@M77uujJi       MBk             PuJrLXSPXZBBOZ@8BO0;L7\n\
+ri7v7vLLruL77i7@B@BBMBB@MBB@B7:iM@B@r   i20BG8Z8EZ0ZNE0MMMkXqOBMEBBZ0OB0 ,.,::,,::,: LNMBX  5@@BB@85YL777:      B@B           :JOMqZ2uEMEOMZvYLv22YYL2\n\
+Yr777Lvr7Lv7;7@B@BBMBB@MBM@@U::r@B@B,   .ru0BO8ZGE8ZOZOOBvSkX0M88@BNGO@q :::i:::,. :X8OB@BONGBZ0E0MB@B@MMOM8ZFvY@B@B@B@G8GBB@@@M1SX0SXXq8MNLLLNYJ57L5M\n\
+77LuLLvL7L7r7@@@BBMBB@BBM@BG,:,5B@B@   .  :jkMOG0ENENGZBO LGN8OOM@MEOMON.,:i:irL: r@MOMBB@uM@8k0PqNZO@@@B@B@B@@@MMB@B@B@B@BBMMOMOBOM0PqGGZ;7ijkq157rrv\n\
+L7YYuvLLvvr;@B@MBBBM@@BM@@@i:i:O@B@B        .iX0Nq0XqN@B: iqqqGM@BOGM0OMi,::;ivvi7OO008MBMGqSuFXqP0Z8B@MBMOOMOMGEqEB@B@GBOZE8E8ZMOM@@B@@OY:BPYFGkUX1Fv\n\
+v7vLvv7vLviBB@MBMBMBB@E@B@B:,ii@@B@@L        :X@BOEZG@@v ,.U0NG@BOqMZNG@U:v7r7i:7EPPX0EMMNEEP22PkN08ZMBBMBOMGEPPkPP8BB8MMOZGEZZ8GOGNSMO0ZM1O0PU1LujU2L\n\
+1LjJuYYv7r8B@MBMBB@B@ijB@@7.::7B@M@B@   .:XB@BB8OGMB@M,.::.iGqOBBEOBOOMMMi7i:,.7PXE0GMG5r:0PqSNqqX0ZGEBBBMMGOZG0Z0Nq@OMMOGMOGEGGOEPSYv7rvYPSF517JuujjL\n\
+uv7vuYLLvOB@BBB@B@B@FLPZMBu,   1BMM@BGE@B@B@MOZGNEZMBY.ii:.5ZG8BB@8GM@B@@i.::,7BZMZqS7::,uEqSqSF1XqEG0O@MBMOOONEq0EPM@MOOMOOG88M1j1X5uJuLJLLvYU121uUju\n\
+u7rruL;X@BBMBMBBBM@858NkPq@BMNO8@B@B@B@B@B@M8EGGZN8M@,:i:.UMOZZGB@Mv...:NB5::7vJ2L:,7,::iqGFkPqFkGOEOZ8O@BBMM8E0GZZPMBMMMMO8O8MMjJuukFSSF5k25U5uSPqkNU\n\
+7YS5vLX@@OOMMMMBM@MqXP1SkkM@@@BBMMOMMBB@MBMMNZ0ZN0Z@Y ,i:iOGN00O8@B: :vNZPEL:r:,...::,::LENk1X12kqkqEOEZMBMB8OE8qE0qO@MBMOZGZ88MvYvjUuLuU5uFSNUUjU2k5S\n\
+\n");
+        
+    console.log("%c 这是不是很酷”", "font-size:20pt");
+    </script>
+
+
+
+</body></html>

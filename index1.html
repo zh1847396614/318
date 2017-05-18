@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>相册</title> 
+
+<style type="text/css">
+html {
+	overflow:hidden; 
+	-ms-touch-action:none;
+	-ms-content-zooming:none;
+}
+body {
+	position:absolute;
+	margin:0px;
+	padding:0px;
+	background:#fff;
+	width:100%;
+	height:100%;
+}
+#canvas {
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:#fff;
+}
+</style>
+
+<script type="text/javascript" src="js/ge1doot.js"></script>
+<script type="text/javascript">
+   console.log(' this is colored','background:#aaa;color:#bada55','this is not colored');
+
+          console.log("\
+r2O777qBO8ZO@BPLvr0EPjPSMFFuFkGvuS8BM88qXGMqG0YYr2M80JXF@BMOOMMEGEOZZOO88EBMOGMOMZ8GGOOOOFqMBMBPPqBMMMSXMZO8OZMZMMMZO0@krvjYJYjJuYJJJYjYuJjYuJuJuJuuUY\n\
+iLZi:SGMOMXZBOq2L7;i;205kEPU5UXXMMBBMX5Su1OE0OFjrrrvSuuqqGZOOMEqPZG8q0GGNEX008N8ZEPG8OZZXE5NMBMZE8OMOEEZ0qZGE0Z0EO8G0OON;ii77v777v7v7v7v7LvvvLvLvLLLLv\n\
+12B1UZM8MZ88ZOZkOG275uEMPS0P85ur5NNPUu11N8M8@M2LJr7iuPUOPqO8MGGOMGMZGG8OMGOZMOOZMZOZO8OZOMXYEEEZ@B0EESZOOOOMMMOG0ZM05OMMOSU7vvvr777r7r77LLJLjYuYjJuJuL\n\
+BBXMM@OBMM8EZOZ8ZBMMMOqO8GqPFSLiSZ77JGOMMOP0E1POXuvvL77NME58ZONZOOPPqMB@5SNB8GOOG88O8M88OM8qqXNMM85OO0qMOOOZO0MG80NF108MOMMZ7r72FU1F5S2uv7rvvLvYLJYuJL\n\
+MOqZOOOZZ8MO8Z88GNOMBM@MO8BkLuLvGJ7J5X8OBEM88k15Zkr7ULu0qXGO80qGM8N1M8O1GkOMPZGEG888BZ0XO8NUEMMNP0PNM8OENqOGONOOME0NX0ZZM0qEL2BB@B@B@B@BBOPvr7v7LvvvL7\n\
+8Mqq8OZM88ZGNG8888ZOE8Nq0MqP5YSMkUXv7NGMMM8E08Y8GGSL2UkMk8Z8ZNGO0PGZOMZkFPMZFO0OOOZ8ENZGGNSOOBNE0GF5OMMMOqGBG8EESjkEFNZ8OOk8M@MMOMMBOMOMMB@8S8GGYLY77r\n\
+OMEFMMM8O80PNFO8MZZZGqjEBG28MZ27JMZvr500OE8SkEOZkXMMO0JGMMMOMqE8NuXOMGE1UOBGMEMMMOOEGGM8OqkGOZ71PFBE8MMMMEGGG8P55LOGGGGNOOMMBMO8GZO8EEOZM8MM@MOOBZOZMM\n\
+OBGUOMMOGONSkM8088XOq8EM@kuMBBuLqMqE0E5XG88GNBM8OMOqvuL2MMG8OPXE0MOE0@ZUXBMM8O8OE88MBBM@B@B@BMEGONBBB@O@G0O8ZMOBBBMMOMOO8MOMMMOMMOOMG8GOEMMMOGZ8GNB@B@\n\
+MO81MOMMO8M5ZOBOO8MMNqOZPYOGOMMY1UvFPYPE8GFXEL0MOOZ215F1O80POOMM8P0GMOMq5Z88OOGOBM@B@OSu7r7LLuE8@B@B@B@B@B@B@B@B@B@M@BBOOOMGMMMBBOBOBMO08NOMOZO880M8OO\n\
+GOq1ZOEGEGMkqM0OMOGOGX0BYqBM0MPXEU5q1PG@MBMGqvFMZ8kEBZkBMZqBONS8E1rP00ZqXBMOMMOBBMFr.:.,.  :       :,,:rirJ5kE8@M@B@B@B@@@@@B@B@B@B@BOOMOOZGZO88GOZO8O\n\
+MOGSMX8MOGOOOOO8OG8M@0OOuM@G8MOSXZPSBBMP8MEOM@@@@S5GGPONNMOMZkkk52qXOOOPZ8BOOO@M0i7r: :i..::,,.,..,::,:,  .        .,:::i7uUPN8M@B@B@B@MMO8OBMB0ZOOEOG\n\
+MOOZGEGMqOMM8BMO8OEOG8ZuL02FPO5,rr:Y5qU:2viuFZ7r1q150JN1rGOGkNN0GMBBMMZMOEMMOBO1  ::i.i: :..:,.,,::r;rii::r.i. :..   ,.     . ....:, :1MBBMEq@BBZOOOOB\n\
+MOM2PqOOqEO8OMGEOOM08MPiX8X5XkZU5uqjLUu,,... 7: .:iF1,,:vrZUii1B@B@B@00BOMBMB8S. :i.::. ,.:7:..  .:rvi;iii7;i.O@@B@Or.,.,,:i::r:i:: ,B@B@B@B,:J@MOMOOZ\n\
+OBkqGPPZ08GO0MGP08OMMB5v8BO0XqO@B8GOBZ7r8@BMuju2r25OBkuS8uMNuu0@O8X2M@OMPZMBXMj  :::. :OF:rj:. .v7,rur::ri7i,7B@B@@@M,::,i:i:Lvri7i v@B@B@B@:  ,B@OEPF\n\
+BMUEO12ZXNOGMMGjN0MZMBJvM00B08M2rJUUBSrO@B@B@MGB52FqEBBBBB@FvP@GS77:rOBMBZ8EOM0  ::..8@B@BOii .:P:i7u7:iiiu:,O@MMM@BU,::::7:2LiiYuY .BBMG0MU::  7BMGM8\n\
+MB2OkqNk5OBGqMZOMOGOOMruGZX@E8GSuk5kO5q@BBOBMMB@r:iS0M8G1GBG7FNXU2::::X@O@GFZBP .i: r@8v:kB7:,.:ii77Ur::rSL: vBO10qu::::.72vFv :rF: .ZMMF7Liiv:, k@MMM\n\
+MGkO00Xu18@8XOG5ji0uEBuvFOqP5k52UJ2vGLuM@BMMMM@BPL20MFMUUF@SuM@@M1JuUL8M@B@OGMP.:,, uBON1vE:L:.7i,.,7:..:,::,7OM15j,,:,.,rL71, :Yk7:iP@BO1; ;;,:.v@8MO\n\
+EOuMGq5FXOBOPGMr.:EXZ@2vE@YZFNXk5kP0PU:uBBB@BMFGi,rMS0XX1NZqO@B@BM5JuO0@B@q8ZMq...   2B0vu::i  .r,.L7i.vOZB@BBBMk7v:   .:77Xu  @B@B@B@B@FjLrj: . 5@BMM\n\
+BEYX0S0721M0GMMi:iZZ8MvvZEJNOU1511XEqEOBMNEOFk887:YSuS1XEZMB@B@M7r;.u 7B@BGFEMq      :@Oujv.    .:iL;.7B@B@80L7P: MBMOq2U7:rriB@@B@@OvuqrvUB@BML.OBO@8\n\
+BNkGkkOUPNk1PMEi.:PE5G7kGMUXE0Fq5SM@B@BB8@BPG@BBB@0XE80k8@B@MBBB    .   Z@MPqMv U@M@BM2Zv.i@BBB@U.i, LB@Bjr;rYO2: r@B@B@@@i .@B@B@BM17i  YM0B@B@rGM8G8\n\
+Mk@BqPMM80XUNN8N8GOOO07OOEPX5qXqGM@MB@@Mj2i OBMMBBBBMOZZ@BMOMB@L:;:;     G@GOM.:@B@BB2irqi X@B@B@L  MB@Lrr.:,5@,  .Z@@BM@B@:0B@B@B@qF;L:uBEiJB@BZMMGMM\n\
+Su1kSFk51P15XSqNqNXqXk7G00N8FGNPkBBMOBB@ .  1@MMMBOZE00BBM8MM@B  JB      rBOEE:@B@@Z,U5rL,  N@B@B@v@Bi..rk riMBi .:SG@BMOMB@B@B@NLuP:  MBMG0:EB@BOMBBM\n\
+kJUSUuXkkSNSSSPkkXP282;8OZO8PG8qXMBMMM@@  r,7BBOBMBESPBBBMMM@B,  u@    :  @ENqNB@BB;.7@j. .  B@B@B@2rr8Bq5. UB@: ..:XPMMMOOB@B@N7:iJ,. M@uXq.v@BBEZEGO\n\
+OO8OEEZMqZEGG8ZZM@SOBF;BBMMZU@8O8@M@MMB@, OX:@MMBMMOPBMBMBM@BL   qBY  .7  B@GPN@B@O::1B:.,  .BB@BZ:. @B@O1: S@@. ,..72BMMMMMMBBML7Sv.. @OrvjiMB@8GZ8GG\n\
+MZ888GMM8MBOMZOO@0SO@1vOBEOPFOMOMBMMBM@@: YMiB@M@MBBBBBMMM@BB    5@v :r:  jBOUNB@M@vrZ@7 .. qBMB@B,  O@BMJL OB@   .  X@BMMMOMM@B@Ekr:..M1 7E1N@BOGOOMM\n\
+MM8@MMOOqZEOZ0P88FkX0S7NSSkSUS55N@MMMB@@i FBiMBBM@B@BBBBM@B@  :. 1Bu  i;. .MqPB@MGO2YMBr. .k0MB@B@M, .B@BJ2 2@B.. .. BB@PXMMGMB@@Mv.r7 M2.L@M@BBqEqEE0\n\
+0P80Z00XqkqNEqSXqPq5E27kqPXkqkX2EBMBBM@B. FM7F@BOP@BBM@MBB@. :.  u@u  ::: .@BN@BMjZYvM@:  .J0@@B@B@Br :B@jUi0@M .:, .B@8LrSMOZ@B@M;::: MX:kB@B@M5Fk5kk\n\
+FqGE0q5kSXFSSX15kqkPqPr0qPFXkqkUP@MMBB@q  2M7:B@M5@@OMM@@@: ::,. ZB5  j:,  @ZkB@BkOu;B@:   XBGq@BBB@B::E@EjLM@k     :Mr. ;O@BMM@O72J:: ZM,,@BBBOFPkNkP\n\
+uL25XPq15SUJU51uU5F2PNvuk5Fu51kJSBMO@@@.  :BP :B@5GBBMBM@5.,::.r Z@Z  8r   BEk@B@MO0PB@v  rNBNZB@fBBB@B@ZEOGNMBE..:Jv7   vB@B@B@Bv:ii7i 8@r M@B@EqEZqZX\n\
+F22S22U1500qu522uqNNFUYLL1F1j2juu@BMB@B1kkE0G21@BEN@BMMB@v.....r NBB  JS   BN8B@BMB@BBM88@XSO@@@BBB@B@M@BMO@BM@@B@GM8XU@B@B@M@BX7L:.,, ZMY BB@BNXEq0Z0\n\
+FuF1512u5uUSPS8GPS8OSLJ1kXPFkkFUvU@B@B@B@@@XN@@B@Z1S@BBB@F.    .  @P  5O  LMPFNF1O@B@MOM@B@BE5P5S1MOMFu8@B@MBMBB@B@B@@@B@@@B@B@0Y2: .: 0Nr X@BBFPq0PEk\n\
+Uju11FFku1ZZXqkSSSkEvL0ZMM8MBOSk2vM0:j8@M@OXEOBBMuJ:u@B@Z@BGJ2u1BuOMZ@BO  0GXku2vZB@BM8MMBM@Mu2S1F11uu2@BBMBMMOMMBMBOq0GGMM@GUO@B@Oqq@;GkqS@M0XXPqkSFk\n\
+SU52SPqXNF5UFNkk01qkMvk2F22U52FuUu5Svv5MB@@0EMBM@M2uj10kuB@B@B@B@B@@@B@BviSqS1S2UO@B@B@MBMBBNJFXPFkSkUFB@MMMMMBMMMMMMuFU21112YBBBB@B@B@B@B@ZjuFFS5PXPS\n\
+u2Sq1FUSF5YU1X2F1FPFukJu2UuujUuF5SU2M@BBM@MZB@MMM@u2kFjJLMBBBBB@B@BBMMM@UY2XFkSP1MBBMBB@MMM@XJuSk0NF2LE@MMMMMBMMMBO@O1FXkk5k25B@MMMBB@BBMBB85SSXPkXqXq\n\
+kU51F215FU5F52UU152JUu1u2U515SF2S15YPBBMMB0Y@BMMBBuu11S1LP@MMM@BLZ@BBMM@8u11S1FPSX@M@BZM@MMBX2k521XFSj@BBMMBM2BB@MM@NUSSFFS55F@@MOBMBB@MMM@X5kqSEZ0GNF\n\
+S25kFkFkS12S5S5k2F15515S5F2F11U2U2u12@BMM@5vM@MMBBjuUFU1YuBBMBBZrJ@@MBOM@Su1uUuUU2@@B@XGBBBBuXkXUSkqFGB@MMM@2PBBMBBB2X5XFS5F1q@@MBBEG@BBMBBS1SkXkqSP0E\n\
+uvuu512UF225S1F25UF5F1111U2U5152F25ULO@MBBkrqBBM@OJu5J1Uju@BMM@Puuk@@MMO@XuF1U5UUY@@@B25@M@8uU122j2kkM@MMM@N50@MBM@ESXPPNXXSk0@MBM@USB@MBBMPqSkkkFXSk5\n\
+q0EN22Uuv52F12UFUFF52F5XXPkkU121U2U5J0BBM@FSE@MMMMJUuUuUu1@@MB@uJu7EB@MMB8LUu21kuJZ@B@YOBBBOu5Fk51ju2@BMM@OuUSB@BBBqqZqkkNPkUOBMM@Ouu@BBB@0SkNXXPNSPSq\n\
+@B@B@B@qFFS522F151F11jFGMMMMMEP51u2uLk@MB@UU0M@MMMMMBBM8Oq@BMMMu2ju7ZBBMM@OG80q52LMB@BLq@MBM5S0Fq2uYBBMMBB1u1u@B@BGLU5XqX2S51M@MM@Xu2B@B@@k5kkqFPq0kP2\n\
+q0GMB@BBB@BBOOOMMMMM8ZXSkMOOOBMBMMMMZMB@BOLJYU@@MB0GOBBBMMB@MMMMMMZk2@BBM@EXEBMM88B@B@kq@BM@JuU21XJkB@MB@qJk51B@B@SuU2uFXPF5JMBBBMJ1JMB@BBuF5SSXFXXPPS\n\
+MM@BBB@BOO@MBOMMMOMOMMBMO8MOMMMOMMMMMMBMBMNS5JEBBBEJuuSkE0@BBMBOMMBMMB@MMM8XPqZOMOBBBBMM@MBBNqP22YuB@MBBO2F5Sk@BBBq1kFk51SSvvB@M@FuUUB@B@Nj1F1SkNqXkXk\n\
+BMOBjEBB22qOMMMMOMOMOM8O8M8M8MOMMBB@M@MMMBMBMOO@M@OJYuu5UuZ@MMBOMBBBM@BBMMMMMMMMMOM@B@8BBBB@MMMBO0O@MMBGYFFFjEB@MM1PFF1S180Uk@B@MkXkX@B@@PUPSSFS1kkEPX\n\
+S1kP0Xk12U1UFqMMBMMMBOOOO8OOMMMME5PPZ8@MMMMOMMMB@BOLJuUUSUZBMO@F2qZ8OM@BMMMMMMMMMM@B@BMO@M@MMM@MMM@MMMB0P11UuO@BBM5FXq0FX5kFBB@BMJ2j8B@B@0kP0XNNX5k1kX\n\
+E8MO0NkXSXFF5u5XPOOOEMMMOMMMOMOMONuLL2BBMMZBMMM@BBMOENkSUJu@MMMBYuJjLqBMMBOBB@M@MMMBM@88B@B@X5NG8BBBM@MMBMNSu@BBBOukSqN0SF5UM@MBBPUU@@M@OSXqFS5PXqqZSX\n\
+MN88ZXXSkXPXqkX55UFF1kZOMM@B@MBMBB@GXFMBBM2kOMMB@MBB@B@MOq5M@MMBEuFuYO@MMBXLU5k0MM@qMBMOBB@BGS5jNBBMBOMM@MBMM@BMBUUSX55FSXqkOBBMB515@B@MPJkZqJ1SS2XPN1\n\
+NSqX5qPNSkFNXkkkFS5PkF5kkPXqkZ8MB@@@BOO@M@OkjuuM@B8B@@B@B@@BB@M@GUUF2MBBM@SLu5UUM@BMNOMB@@BGZMOM@@M@qJFNqOO@@@MMZOMO0EZFuF5kGBM@0155E@MBOqN0PXqkSNkPXq\n\
+S5P5XSEZGPNkqXE0GGZPZP0N0kk5kFPSNGBMMOOBBM@B@BOMMMX1Z8G8MB@B@B@B@OMZSq@B@BOUkSPSOOOOPXMB@@@O0SFBMMBBMqPk211G@MMMMOBMMOBMMO8NBBBBXFSj@@@M@qXSqZ8XZZkqGE\n\
+ii;;iririrr7rrr77777vv7vvvvLvL77777vj@B@B77JuXB@B@BYLuUFj52MB@BBNMMB8@B@B@BMN0PNXFFqkPXXNOPMB@BBN@B@MMMMM@M@B@OM0MBMZMB@@@B@B@BM0MMOB@B@ME15kEEZZNkEZG\n\
+;:riiiiir;ii;irr7ii:i:i:::::::::::::7MOk7.::i,JBMF7:i:ii::::JuJi::::iir7JP@@@Xiirir;riiiii7P@ENGG2UUY7v7vLFXMB@@0ir7LvLvLL1M@B@OvLUkN0M@@B@kv7LLLvuvv;\n\
+2uu125222F22UF51JFUUuuJuYYYuYjYLLjLJFF7i:ri;iiv2r::iii7ririi:::::iiiii:::7vY7iiiiiiiiiiiii:ivr::.::::iiiii::jOMPr::::i::::rZB@BZ:r,:,.iOBBM@j::i::v7i:\n\
+qSXkXFkFS5kFPFX11S0PXSXXqk0qNkXSXFXFuJujuu12UuJvYu115UX5kFSFF5S251515U22uS5LuJuu52FuUuF12u2uY:irLYjJUjuUUJYYkuJ7LYuYjYjYU8@8SYjYUriii:2qY:,:ir777rvr7i\n\
+v77vvLvv7L7vv777r77v77rLYJLLvLLYvvuU7Lvv7LvLvYJjYjLJLjYJLJYjJjYuJuJuJ22uJF5S5SFFSS2S5FFkF1Uk2LL1uUu1uuu1uUjYvLuuUF51U1uUNO5jvYLLuuYJLYYLr7vjJ22F1FUUuU\n\
+LrYLLvLvLvL7v7Lvv777v7Lv77v7v7v7vvL77r77v7v777v7v77777v77vvr7777v7v77LJ7vv7vvrv7YY77L7v7LLLJu7v7v7vvLvvYuLYYJLLvLLuYYLYLL7vvjYL7LLuYJLYJ22Ujujujuu511Y\n\
+v7vYLYvLvL7LvYvLvvvv7jYL7vvL7LYLLY7v7vvLLYLvvYLLvL7LLvvLvuvLvLvLvvLLvUjYLujuLLLYv2LLvLvYLJLJ22LLvLvLvJLLuuLJYujJLYL2UuYJJjYuJuU1uujJYJYYj115uUu121U5F5\n\
+LrYYY7Lvv7vvLvv7v7L7Lvv7v7v7vLv77777vLLLLvvLYLJ7v7v777uvLLLvLvJ7vLYvLvJvv7LvLvYYLvLLLvuJvLYLLLL7LvL7LLUYLLLvLLULLvLvuJuLJvYvvLjYuLJLJJuLYvYJjJYLLvYYuL\n\
+JvYjvLvLLYLjLJLLLYvLLLvJLLLuJYLYLJLLYuLYLLvLLJLYLLLLvYLLLLvLvLLLvv7v7vLYvLvLvvLjvYLLvLvU7v7vvvvLLL7LLLvUvLLYvLvuLv7vvLvuLLvYvLvJLLvLvLYUYLvLvYLYvvLLvv\n\
+Y7jLYvLLYYuLYvvvYLLLY7LLYLjYJLYYjjjJuYLLLLYvLvYLLJ2LLLYLJYJLLLuJYLYLJYuJuYYuULJJuYjLuJjJ2uuJuuUuuJuj22uJuYuJuJJLuUUjuJUuUjuYu22JuJuJuJuu2U2uuJuu1u2u5u\n\
+Lr777LvLvv7v77777v777vv77777777v7vvLv77v777vvv7v7Yvvvv7v7vvvLLLJLLvLLLvLvv7LL7vLvL7vvvvvvJ7vvLvLvLvL7YYLvLvLvLvLvYJJvLvYLJLLvLYuLYLJYYLYLJYuJYLYLjYuYL");
+
+   
+  
+  
+"use strict";
+
+(function () {
+	/* ==== definitions ==== */
+	var diapo = [], layers = [], ctx, pointer, scr, camera, light, fps = 0, quality = [1,2],
+	// ---- poly constructor ----
+	Poly = function (parent, face) {
+		this.parent = parent;
+		this.ctx    = ctx;
+		this.color  = face.fill || false;
+		this.points = [];
+		if (!face.img) {
+			// ---- create points ----
+			for (var i = 0; i < 4; i++) {
+				this.points[i] = new ge1doot.transform3D.Point(
+					parent.pc.x + (face.x[i] * parent.normalZ) + (face.z[i] * parent.normalX),
+					parent.pc.y +  face.y[i],
+					parent.pc.z + (face.x[i] * parent.normalX) + (-face.z[i] * parent.normalZ)
+				);
+			}
+			this.points[3].next = false;
+		}
+	},
+	// ---- diapo constructor ----
+	Diapo = function (path, img, structure) {
+		// ---- create image ----
+		this.img = new ge1doot.transform3D.Image(
+			this, path + img.img, 1, {
+				isLoaded: function(img) {
+					img.parent.isLoaded = true;
+					img.parent.loaded(img);
+				}
+			}
+		);
+		this.visible  = false;
+		this.normalX  = img.nx;
+		this.normalZ  = img.nz;
+		// ---- point center ----
+		this.pc = new ge1doot.transform3D.Point(img.x, img.y, img.z);
+		// ---- target positions ----
+		this.tx = img.x + (img.nx * Math.sqrt(camera.focalLength) * 20);
+		this.tz = img.z - (img.nz * Math.sqrt(camera.focalLength) * 20);
+		// ---- create polygons ----
+		this.poly = [];
+		for (var i = -1, p; p = structure[++i];) {
+			layers[i] = (p.img === true ? 1 : 2);
+			this.poly.push(
+				new Poly(this, p)
+			);
+		}
+	},
+	// ---- init section ----
+	init = function (json) {
+		// draw poly primitive
+		Poly.prototype.drawPoly = ge1doot.transform3D.drawPoly;
+		// ---- init screen ----
+		scr = new ge1doot.Screen({
+			container: "canvas"
+		});
+		ctx = scr.ctx;
+		scr.resize();
+		// ---- init pointer ----
+		pointer = new ge1doot.Pointer({
+			tap: function () {
+				if (camera.over) {
+					if (camera.over === camera.target.elem) {
+						// ---- return to the center ----
+						camera.target.x = 0;
+						camera.target.z = 0;
+						camera.target.elem = false;
+					} else {
+						// ---- goto diapo ----
+						camera.target.elem = camera.over;
+						camera.target.x = camera.over.tx;
+						camera.target.z = camera.over.tz;
+						// ---- adapt tesselation level to distance ----
+						for (var i = 0, d; d = diapo[i++];) {
+							var dx = camera.target.x - d.pc.x;
+							var dz = camera.target.z - d.pc.z;
+							var dist = Math.sqrt(dx * dx + dz * dz);
+							var lev = (dist > 1500) ? quality[0] : quality[1];
+							d.img.setLevel(lev);
+						}
+					}
+				}
+			}
+		});
+		// ---- init camera ----
+		camera = new ge1doot.transform3D.Camera({
+			focalLength: Math.sqrt(scr.width) * 10,
+			easeTranslation: 0.025,
+			easeRotation: 0.06,
+			disableRz: true
+		}, {
+			move: function () {
+				this.over = false;
+				// ---- rotation ----
+				if (pointer.isDraging) {
+					this.target.elem = false;
+					this.target.ry = -pointer.Xi * 0.01;
+					this.target.rx = (pointer.Y - scr.height * 0.5) / (scr.height * 0.5);
+				} else {
+					if (this.target.elem) {
+						this.target.ry = Math.atan2(
+							this.target.elem.pc.x - this.x,
+							this.target.elem.pc.z - this.z
+						);
+					}
+				}
+				this.target.rx *= 0.9;
+			}
+		});
+		camera.z  = -10000;
+		camera.py = 0;
+		// ---- create images ----
+		for (var i = 0, img; img = json.imgdata[i++];) {
+			diapo.push(
+				new Diapo(
+					json.options.imagesPath, 
+					img, 
+					json.structure
+				)
+			);
+		}	
+		// ---- start engine ---- >>>
+		setInterval(function() {
+			quality = (fps > 50) ? [2,3] : [1,2];
+			fps = 0;
+		}, 1000);
+		run();
+	},
+	// ---- main loop ----
+	run = function () {
+		// ---- clear screen ----
+		ctx.clearRect(0, 0, scr.width, scr.height);
+		// ---- camera ----
+		camera.move();
+		// ---- draw layers ----
+		for (var k = -1, l; l = layers[++k];) {
+			light = false;
+			for (var i = 0, d; d = diapo[i++];) {
+				(l === 1 && d.draw()) || 
+				(d.visible && d.poly[k].draw());
+			}
+		}
+		// ---- cursor ----
+		if (camera.over && !pointer.isDraging) {
+			scr.setCursor("pointer");
+		} else {
+			scr.setCursor("move");
+		}
+		// ---- loop ----
+		fps++;
+		requestAnimFrame(run);
+	};
+	/* ==== prototypes ==== */
+	Poly.prototype.draw = function () {
+		// ---- color light ----
+		var c = this.color;
+		if (c.light || !light) {
+			var s = c.light ? this.parent.light : 1;
+			// ---- rgba color ----
+			light = "rgba(" + 
+				Math.round(c.r * s) + "," +
+				Math.round(c.g * s) + "," + 
+				Math.round(c.b * s) + "," + (c.a || 1) + ")";
+			ctx.fillStyle = light;
+		}
+		// ---- paint poly ----
+		if (!c.light || this.parent.light < 1) {
+			// ---- projection ----
+			for (
+				var i = 0; 
+				this.points[i++].projection();
+			);
+			this.drawPoly();
+			ctx.fill();
+		}
+	}
+	/* ==== image onload ==== */
+	Diapo.prototype.loaded = function (img) {
+		// ---- create points ----
+		var d = [-1,1,1,-1,1,1,-1,-1];
+		var w = img.texture.width  * 0.5;
+		var h = img.texture.height * 0.5;
+		for (var i = 0; i < 4; i++) {
+			img.points[i] = new ge1doot.transform3D.Point(
+				this.pc.x + (w * this.normalZ * d[i]),
+				this.pc.y + (h * d[i + 4]),
+				this.pc.z + (w * this.normalX * d[i])
+			);
+		}
+	}
+	/* ==== images draw ==== */
+	Diapo.prototype.draw = function () {
+		// ---- visibility ----
+		this.pc.projection();
+		if (this.pc.Z > -(camera.focalLength >> 1) && this.img.transform3D(true)) {
+			// ---- light ----
+			this.light = 0.5 + Math.abs(this.normalZ * camera.cosY - this.normalX * camera.sinY) * 0.6;
+			// ---- draw image ----
+			this.visible = true;
+			this.img.draw();
+			// ---- test pointer inside ----
+			if (pointer.hasMoved || pointer.isDown) {
+				if (
+					this.img.isPointerInside(
+						pointer.X,
+						pointer.Y
+					)
+				) camera.over = this;
+			}
+		} else this.visible = false;
+		return true;
+	}
+	return {
+		// --- load data ----
+		load : function (data) {
+			window.addEventListener('load', function () {
+				ge1doot.loadJS(
+					"js/imageTransform3D.js",
+					init, data
+				);
+			}, false);
+		}
+	}
+})().load({
+	imgdata:[
+		// north
+		{img:'http://ofnl6cwuv.bkt.clouddn.com/%E9%93%B6%E9%AD%82%E8%83%8C%E6%99%AF1.jpg1', x:-1000, y:0, z:1500, nx:0, nz:1},
+		{img:'imgs/2.jpg', x:0,     y:0, z:1500, nx:0, nz:1},
+		{img:'imgs/3.jpg', x:1000,  y:0, z:1500, nx:0, nz:1},
+		// east
+		{img:'imgs/4.jpg', x:1500,  y:0, z:1000, nx:-1, nz:0},
+		{img:'imgs/5.jpg', x:1500,  y:0, z:0, nx:-1, nz:0},
+		{img:'imgs/6.jpg', x:1500,  y:0, z:-1000, nx:-1, nz:0},
+		// south
+		{img:'imgs/7.jpg', x:1000,  y:0, z:-1500, nx:0, nz:-1},
+		{img:'imgs/8.jpg', x:0,     y:0, z:-1500, nx:0, nz:-1},
+		{img:'imgs/9.jpg', x:-1000, y:0, z:-1500, nx:0, nz:-1},
+		// west
+		{img:'imgs/10.jpg', x:-1500, y:0, z:-1000, nx:1, nz:0},
+		{img:'imgs/11.jpg', x:-1500, y:0, z:0, nx:1, nz:0},
+		{img:'imgs/12.jpg', x:-1500, y:0, z:1000, nx:1, nz:0}
+	],
+	structure:[
+		{
+			// wall
+			fill: {r:255, g:255, b:255, light:1},
+			x: [-1001,-490,-490,-1001],
+			z: [-500,-500,-500,-500],
+			y: [500,500,-500,-500]
+		},{
+			// wall
+			fill: {r:255, g:255, b:255, light:1},
+			x: [-501,2,2,-500],
+			z: [-500,-500,-500,-500],
+			y: [500,500,-500,-500]
+		},{
+			// wall
+			fill: {r:255, g:255, b:255, light:1},
+			x: [0,502,502,0],
+			z: [-500,-500,-500,-500],
+			y: [500,500,-500,-500]
+		},{
+			// wall
+			fill: {r:255, g:255, b:255, light:1},
+			x: [490,1002,1002,490],
+			z: [-500,-500,-500,-500],
+			y: [500,500,-500,-500]
+		},{
+			// shadow
+			fill: {r:0, g:0, b:0, a:0.2},
+			x: [-420,420,420,-420],
+			z: [-500,-500,-500,-500],
+			y: [150, 150,-320,-320]
+		},{
+			// shadow
+			fill: {r:0, g:0, b:0, a:0.2},
+			x: [-20,20,20,-20],
+			z: [-500,-500,-500,-500],
+			y: [250, 250,150,150]
+		},{
+			// shadow
+			fill: {r:0, g:0, b:0, a:0.2},
+			x: [-20,20,20,-20],
+			z: [-500,-500,-500,-500],
+			y: [-320, -320,-500,-500]
+		},{
+			// shadow
+			fill: {r:0, g:0, b:0, a:0.2},
+			x: [-20,20,10,-10],
+			z: [-500,-500,-100,-100],
+			y: [-500, -500,-500,-500]
+		},{
+			// base
+			fill: {r:32, g:32, b:32},
+			x: [-50,50,50,-50],
+			z: [-150,-150,-50,-50],
+			y: [-500,-500,-500,-500]
+		},{
+			// support
+			fill: {r:16, g:16, b:16},
+			x: [-10,10,10,-10],
+			z: [-100,-100,-100,-100],
+			y: [300,300,-500,-500]
+		},{
+			// frame
+			fill: {r:255, g:255, b:255},
+			x: [-320,-320,-320,-320],
+			z: [0,-20,-20,0],
+			y: [-190,-190,190,190]
+		},{
+			// frame
+			fill: {r:255, g:255, b:255},
+			x: [320,320,320,320],
+			z: [0,-20,-20,0],
+			y: [-190,-190,190,190]
+		},
+		{img:true},
+		{
+			// ceilingLight
+			fill: {r:255, g:128, b:0},
+			x: [-50,50,50,-50],
+			z: [450,450,550,550],
+			y: [500,500,500,500]
+		},{
+			// groundLight
+			fill: {r:255, g:128, b:0},
+			x: [-50,50,50,-50],
+			z: [450,450,550,550],
+			y: [-500,-500,-500,-500]
+		}
+	],
+	options:{
+		imagesPath: ""
+	}
+});
+</script>
+
+</head> 
+<body>
+<div style="text-align:center;clear:both;">
+<!-- <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+ --><script src="/follow.js" type="text/javascript"></script>
+</div>
+
+<canvas id="canvas">你的浏览器不支持HTML5画布技术，请使用谷歌浏览器。</canvas>
+ <audio src="files/See you Again.mp3"  id="music"  autoplay="autoplay"></audio>
+ 
+</body>
+</html>
